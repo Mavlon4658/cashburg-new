@@ -54,6 +54,6 @@ export default function Register () {
         }
         <MainBtn className="mt-5 mb-6">Зарегистрироваться</MainBtn>
         <MainCheckbox className="mt-6 mb-[13px]">Получать информацию об акциях и бонусах</MainCheckbox>
-        <MainCheckbox>Я старше 18 лет</MainCheckbox>
+        <MainCheckbox>Я старше 18 лет</MainCheckbox> 
     </div>)
 }
