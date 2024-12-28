@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Outlet } from "react-router-dom";
 import Register from './pages/Register.jsx';
 import Login from './pages/Login.jsx';
@@ -16,7 +16,8 @@ function App() {
           </Route>
         </Routes>
 
-        
+        <Link to={'/auth/register'} className='text-white text-3xl'>Register</Link>
+        <Outlet />
       </div>
     </Router>
   );
