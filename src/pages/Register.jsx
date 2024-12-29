@@ -1,17 +1,17 @@
 import { useState } from "react";
 import IMG from "../assets/images";
-import LinkBtn from "../components/LinkBtn";
-import MainBtn from "../components/MainBtn";
-import MainCheckbox from "../components/MainCheckbox";
-import PhoneMask from "../components/PhoneMask";
-import FormInput from "../components/FormInput";
-import SelectCountry from "../components/SelectCountry";
+import LinkBtn from "../components/UI/LinkBtn";
+import MainBtn from "../components/UI/MainBtn";
+import MainCheckbox from "../components/UI/MainCheckbox";
+import PhoneMask from "../components/UI/PhoneMask";
+import FormInput from "../components/UI/FormInput";
+import SelectCountry from "../components/UI/SelectCountry";
 
 export default function Register () {
     const [tab, setTab] = useState(1);
 
     return (<div>
-        <div className="flex items-start flex-col gap-[9px] mb-7">
+        <div className="flex items-start flex-col gap-[9px] mb-5">
             <p className="text-[15px] text-[#868A8A]">Зарегистрироваться через</p>
             <div className="flex justify-between w-full gap-4">
                 <LinkBtn img={IMG.telegram} to={'#'} className="w-[103px]"/>
@@ -49,7 +49,7 @@ export default function Register () {
             <div>
                 <FormInput type="email" placeholder="E-mail" className="" />
                 <FormInput type='password' placeholder="Пароль" className="mt-[10px]"/>
-                <SelectCountry />
+                <SelectCountry className="mt-[11px]" />
             </div> : ''
         }
         <MainBtn className="mt-5 mb-6">Зарегистрироваться</MainBtn>

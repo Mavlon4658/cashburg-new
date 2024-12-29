@@ -1,5 +1,5 @@
 import { useState } from "react";
-import IMG from "../assets/images";
+import IMG from "../../assets/images";
 
 export default function FormInput ({type = 'text', className = '', placeholder = ''}) {
     const [showPassword, setShowPassword] = useState(false);

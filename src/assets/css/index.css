@@ -9,3 +9,11 @@ body {
 .form-checkbox input:checked ~ .form-checkbox-icon img {
   @apply block;
 }
+
+.link-btn:not(:hover) img {
+  @apply saturate-[100%] brightness-[100]
+}
+
+.link-btn:active img {
+  @apply saturate-[100%] brightness-[100]
+}

@@ -1,4 +1,4 @@
-import IMG from "../assets/images";
+import IMG from "../../assets/images";
 
 export default function ({children, className = ''}) {
     return (<div className={`form-checkbox flex items-center gap-3 relative z-[1] ${className}`}>
