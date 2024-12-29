@@ -1,9 +1,13 @@
 import { Link, Outlet, useLocation } from "react-router-dom"
 import IMG from "../assets/images"
+import { useEffect } from "react";
 
 export default function Auth ({setShow}) {
     const location = useLocation();
-    setShow(false);
+
+    useEffect(() => {
+        setShow(false);
+    }, [])
 
     return (<div className="h-screen w-screen flex items-center justify-center text-white">
         <div className="flex items-stretch gap-[25px]">
