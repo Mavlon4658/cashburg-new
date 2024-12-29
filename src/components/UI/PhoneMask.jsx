@@ -26,7 +26,7 @@ export default function PhoneMask () {
             {countries.map((data, dataID) => (
                 <li 
                     key={dataID} 
-                    className="flex items-center py-[3px] px-[15px] gap-[13px] hover:bg-[rgba(211,217,221,0.22)] cursor-pointer select-none"
+                    className={`flex items-center py-[3px] px-[15px] gap-[13px] hover:bg-[rgba(211,217,221,0.22)] cursor-pointer select-none border-b border-b-[rgba(211,217,221,0.22)] ${selected?.name == data.name ? '!bg-[#bg-[rgba(211,217,221,0.22)]' : ''}`}
                     onClick={() => {
                         setSelected(data);
                         setOpenCountryList(false);

@@ -54,7 +54,7 @@ export default function Login () {
         }
         <MainBtn className="mt-5 mb-6">Войти</MainBtn>
         <div className="text-center">
-            <Link className="text-[#868A8A] hover:text-[#E28400] active:text-[#111216] text-[15px] font-semibold leading-[18px]">Забыли пароль?</Link>
+            <Link to={'/edit-password'} className="text-[#868A8A] hover:text-[#E28400] active:text-[#111216] text-[15px] font-semibold leading-[18px]">Забыли пароль?</Link>
         </div>
     </div>)
 }

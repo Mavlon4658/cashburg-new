@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import Register from './pages/Register.jsx';
 import Login from './pages/Login.jsx';
 import Auth from './layout/Auth.jsx';
+import EditPassword from './pages/EditPassword.jsx';
 
 function App() {
   const [show, setShow] = useState(true);
@@ -16,6 +17,7 @@ function App() {
             <Route path="register" element={<Register />} />
             <Route path="login" element={<Login />} />
           </Route>
+          <Route path="/edit-password" element={<EditPassword setShow={setShow} />} />
         </Routes>
 
         <Link 
