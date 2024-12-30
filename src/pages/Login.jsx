@@ -2,22 +2,22 @@ import { useState } from "react";
 import IMG from "../assets/images";
 import LinkBtn from "../components/UI/LinkBtn";
 import MainBtn from "../components/UI/MainBtn";
-import MainCheckbox from "../components/UI/MainCheckbox";
 import PhoneMask from "../components/UI/PhoneMask";
 import FormInput from "../components/UI/FormInput";
-import SelectCountry from "../components/UI/SelectCountry";
 import { Link } from "react-router-dom";
+import AppHeader from "../components/AppHeader";
 
 export default function Login () {
     const [tab, setTab] = useState(1);
 
     return (<div>
-        <div className="flex items-start flex-col gap-[9px] mb-5">
-            <p className="text-[15px] text-[#868A8A]">Войти через</p>
+        <AppHeader className="absolute top-0 left-0 w-full md:hidden" />
+        <div className="flex items-start flex-col gap-[9px] mb-5 pt-[15px] md:pt-0">
+            <p className="text-[15px] text-[#868A8A] font-semibold md:font-normal">Войти через</p>
             <div className="flex justify-between w-full gap-4">
-                <LinkBtn img={IMG.telegram} to={'#'} className="w-[103px]"/>
-                <LinkBtn img={IMG.google} to={'#'} className="w-[103px]"/>
-                <LinkBtn img={IMG.facebook} to={'#'} className="w-[103px]"/>
+                <LinkBtn img={IMG.telegram} to={'#'} className="w-[calc(100%_/_3_-_32px_/_3)] md:w-[103px]"/>
+                <LinkBtn img={IMG.google} to={'#'} className="w-[calc(100%_/_3_-_32px_/_3)] md:w-[103px]"/>
+                <LinkBtn img={IMG.facebook} to={'#'} className="w-[calc(100%_/_3_-_32px_/_3)] md:w-[103px]"/>
             </div>
         </div>
         <div className="bg-white rounded-[10px] py-3 px-[14px] flex items-center justify-between gap-[35px] mb-[26px]">

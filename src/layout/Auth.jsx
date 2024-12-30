@@ -9,10 +9,10 @@ export default function Auth ({setShow}) {
         setShow(false);
     }, [])
 
-    return (<div className="h-screen w-screen flex items-center justify-center text-white">
-        <div className="flex items-stretch gap-[25px]">
-            <div className="bg-[#F6F6F6] w-[392px] rounded-[20px] border border-[#D3D9DD]">
-                <div className="flex items-center justify-between p-[20px_25px_0] text-[#868A8A] text-[19px] font-semibold border-b border-[#D9D9D9]">
+    return (<div className="md:h-screen w-screen md:flex items-center justify-center text-white mt-[93px] md:mt-0">
+        <div className="flex items-stretch gap-[25px] w-full md:w-auto">
+            <div className="bg-[#F6F6F6] min-h-[calc(100vh_-_93px)] md:min-h-[auto] w-full md:w-[392px] rounded-[17px_17px_0_0] md:rounded-[20px] border border-[#D3D9DD]">
+                <div className="hidden md:flex items-center justify-between p-[20px_25px_0] text-[#868A8A] text-[19px] font-semibold border-b border-[#D9D9D9]">
                     <div className="flex items-center gap-[18px]">
                         <Link
                             to={'/auth/register'} 
@@ -27,11 +27,11 @@ export default function Auth ({setShow}) {
                         <img src={IMG.times} alt="" />
                     </button>
                 </div>
-                <div className="p-[30px_25px]">
+                <div className="p-[25px_22px] md:p-[30px_25px]">
                     <Outlet />
                 </div>
             </div>
-            <div className={`bg-custom-gradient w-[392px] rounded-[20px] ${location.pathname != '/auth/register' ? 'hidden' : ''}`}>
+            <div className={`bg-custom-gradient w-[392px] rounded-[20px] ${location.pathname != '/auth/register' ? 'hidden' : 'hidden lg:block'}`}>
                 <div className="flex items-center justify-center p-3 pt-6 border-b border-b-[#2C2C2E]">
                     <p className="text-xl leading-[25px] font-semibold">Доступно после регистрации:</p>
                 </div>

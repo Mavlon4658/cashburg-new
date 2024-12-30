@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import PhoneMask from "../components/UI/PhoneMask";
 import FormInput from "../components/UI/FormInput";
 import MainBtn from "../components/UI/MainBtn";
+import AppHeader from "../components/AppHeader";
 
 export default function EditPassword ({ setShow }) {
     
@@ -47,15 +48,16 @@ export default function EditPassword ({ setShow }) {
     }
 
 
-    return (<div className="w-screen h-screen flex items-center justify-center">
-        <div className="bg-[#F6F6F6] w-[392px] shrink-0 rounded-[20px] px-[25px] pt-[38px] pb-[29px] relative border border-[#D3D9DD]">
-            <Link to={'#'}>
+    return (<div className="w-screen md:h-screen flex items-center justify-center mt-[93px] md:mt-0">
+        <AppHeader className="absolute top-0 left-0 w-full md:hidden" />
+        <div className="bg-[#F6F6F6] min-h-[calc(100vh_-_93px)] md:min-h-[auto] w-full md:w-[392px] shrink-0 rounded-[17px_17px_0_0] md:rounded-[20px] px-[22px] md:px-[25px] py-[25px] md:pt-[38px] md:pb-[29px] relative border border-[#D3D9DD]">
+            <Link to={'#'} className="hidden md:inline-block">
                 <img src={IMG.times} alt="" className="absolute top-6 right-[25px]" />
             </Link>
-            <h2 className="text-[#111216] text-2xl leading-[29px] font-semibold mb-[41px]">Восстановление пароля</h2>
+            <h2 className="text-[#111216] text-2xl leading-[29px] font-semibold text-center md:text-start mb-7 md:mb-[41px]">Восстановление пароля</h2>
             { !send ? 
                 <div>
-                    <div className="bg-white rounded-[10px] py-3 px-[14px] flex items-center justify-between gap-[35px] mb-[26px]">
+                    <div className="bg-white rounded-[10px] py-3 px-[14px] flex items-center justify-between gap-[35px] mb-[30px] md:mb-[26px]">
                         <button 
                             className={`flex gap-[7px] items-center justify-center pt-[13px] pb-3 w-full rounded-[10px] ${tab == 1 ? 'bg-[#D3D9DD]' : ''}`}
                             onClick={() => {
@@ -97,7 +99,7 @@ export default function EditPassword ({ setShow }) {
                 </div> :
                 <div>
                     { sendType == 'phone' ?
-                        <div className="-mt-[13px]">
+                        <div className="mt-0 md:-mt-[13px] pt-[2px] md:pt-0">
                             <FormInput type="text" placeholder="Введите код из СМС" className="mb-[30px]" />
                             <MainBtn className="mb-[13px]">Восстановить пароль</MainBtn>
                             { !againLInk ? 

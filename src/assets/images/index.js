@@ -19,6 +19,8 @@ import arrowDownBlack from './arrow-down-black.svg';
 import eye from './eye.svg';
 import hideEye from './hide-eye.svg';
 import flagKZ from './flag-kz.svg';
+import logo from './logo.svg';
+import loginIcon from './login.svg';
 
 const IMG = {
     times,
@@ -42,6 +44,8 @@ const IMG = {
     eye,
     hideEye,
     flagKZ,
+    logo,
+    loginIcon,
 }
 
 export default IMG;
